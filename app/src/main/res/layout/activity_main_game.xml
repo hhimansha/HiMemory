@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainGameActivity">
+    tools:context=".MainGameActivity"
+    android:background="@drawable/back_image3">
 
     <LinearLayout
         android:id="@+id/LLGameInfo"
@@ -57,10 +58,13 @@
         android:id="@+id/rvBoard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
+
+        android:overScrollMode="never"
         app:layout_constraintBottom_toTopOf="@+id/LLGameInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/back_image3"/>
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
