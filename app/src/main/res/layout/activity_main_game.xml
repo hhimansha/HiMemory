@@ -61,5 +61,6 @@
         app:layout_constraintBottom_toTopOf="@+id/LLGameInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/back_image3"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

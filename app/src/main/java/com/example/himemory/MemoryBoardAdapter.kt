@@ -3,22 +3,28 @@ package com.example.himemory
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 
 class MemoryBoardAdapter(private val context: Context,  private val numPieces: Int) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    RecyclerView.Adapter<MemoryBoardAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        TODO("Not yet implemented")
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.memory_card, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+    override fun getItemCount() = numPieces
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(position)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        fun bind(position: Int){
+            //sds
+        }
     }
 }
